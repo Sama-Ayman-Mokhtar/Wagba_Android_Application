@@ -2,4 +2,40 @@
     <string name="app_name">Wagba_Android_Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="restaurant_names_lst">
+        <item>Papa John\'s Pizza</item>
+        <item>7amza</item>
+        <item>McDonald\'s</item>
+        <item>Crepe Door</item>
+        <item>ElDahan</item>
+        <item>PEKING</item>
+        <item>TGI Friday\'s</item>
+        <item>Koshary Sayed Hanafy</item>
+        <item>Awlad Ta2ta2</item>
+        <item>Dunkin\'</item>
+    </string-array>
+    <string-array name="restaurant_descriptions_lst">
+        <item>Fast Food - Italian - Pizza</item>
+        <item>Egyptian - Fast Food - Grill - Oriental</item>
+        <item>Burger - Desserts - Fast Food - Sandwiches</item>
+        <item>Crepe - Fast Food</item>
+        <item>Egyptian - Grill - Oriental - Sandwiches</item>
+        <item>Chinese - Grill - Vegetarian</item>
+        <item>American - Burger - Steaks - Tex-Mex</item>
+        <item>Egyptian - Oriental</item>
+        <item>Sandwiches - Seafood</item>
+        <item>Coffee - Drinks - Desserts</item>
+    </string-array>
+    <string-array name="restaurant_images_lst">
+        <item>papajohns</item>
+        <item>hamza</item>
+        <item>mcdonalds</item>
+        <item>crepedoor</item>
+        <item>eldahan</item>
+        <item>peking</item>
+        <item>tgifriday</item>
+        <item>kosharysayedhanafy</item>
+        <item>awladta2ta2</item>
+        <item>dunkin</item>
+    </string-array>
 </resources>
