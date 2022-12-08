@@ -2,6 +2,15 @@
     <string name="app_name">Wagba_Android_Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wagba">Wagba</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="login">LOGIN</string>
+    <string name="or">-OR-</string>
+    <string name="loginMicrosoft">LOG IN WITH MICROSOFT</string>
+
+
+
     <string-array name="restaurant_names_lst">
         <item>Papa John\'s Pizza</item>
         <item>7amza</item>
