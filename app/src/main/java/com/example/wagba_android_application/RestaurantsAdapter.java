@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Field;
@@ -50,10 +51,8 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, dishesFragment.class, null)
-                        .addToBackStack(null)
-                        .commit();
+                Navigation.findNavController(view).navigate(R.id.action_restaurantsFragment_to_dishesFragment);
+
             }
         });
     }

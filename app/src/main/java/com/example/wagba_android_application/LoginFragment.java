@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,9 +28,7 @@ public class LoginFragment extends Fragment {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((AppCompatActivity)view.getContext()).getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, RestaurantsFragment.class, null)
-                        .commit();
+                Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_restaurantsFragment);
             }
         });
         return view;
