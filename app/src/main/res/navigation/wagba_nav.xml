@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/wagba_nav"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/restaurantsFragment">
 
     <fragment
         android:id="@+id/profileFragment"
@@ -19,5 +19,18 @@
         android:id="@+id/restaurantsFragment"
         android:name="com.example.wagba_android_application.RestaurantsFragment"
         android:label="fragment_restaurants"
-        tools:layout="@layout/fragment_restaurants" />
+        tools:layout="@layout/fragment_restaurants" >
+        <action
+            android:id="@+id/action_restaurantsFragment_to_dishesFragment"
+            app:destination="@id/dishesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishesFragment"
+        android:name="com.example.wagba_android_application.dishesFragment"
+        android:label="fragment_dishes"
+        tools:layout="@layout/fragment_dishes" >
+        <action
+            android:id="@+id/action_dishesFragment_to_restaurantsFragment"
+            app:destination="@id/restaurantsFragment" />
+    </fragment>
 </navigation>

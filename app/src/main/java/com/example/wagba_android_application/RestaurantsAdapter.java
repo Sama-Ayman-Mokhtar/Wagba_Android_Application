@@ -1,6 +1,7 @@
 package com.example.wagba_android_application;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.lang.reflect.Field;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.Viewholder> {
 
     ArrayList<RestaurantsModel> restaurantsModelsLst;
+    Context context;
 
     public RestaurantsAdapter(ArrayList<RestaurantsModel> restaurantsModelsLst) {
         this.restaurantsModelsLst = restaurantsModelsLst;
@@ -26,7 +29,7 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
     @NonNull
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
+        context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.restaurant_item, parent, false);
         Viewholder viewholder = new Viewholder(view);
@@ -41,6 +44,18 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         int id = holder.itemView.getResources().getIdentifier(restaurantsModel.getImage(), "drawable",  "com.example.wagba_android_application");
         Drawable drawable = holder.itemView.getResources().getDrawable(id);
         holder.image.setImageDrawable(drawable);
+
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, dishesFragment.class, null)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 
     @Override

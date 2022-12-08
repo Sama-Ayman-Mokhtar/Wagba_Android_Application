@@ -10,7 +10,7 @@
         <item>ElDahan</item>
         <item>PEKING</item>
         <item>TGI Friday\'s</item>
-        <item>Koshary Sayed Hanafy</item>
+        <item>Spectra</item>
         <item>Awlad Ta2ta2</item>
         <item>Dunkin\'</item>
     </string-array>
@@ -22,7 +22,7 @@
         <item>Egyptian - Grill - Oriental - Sandwiches</item>
         <item>Chinese - Grill - Vegetarian</item>
         <item>American - Burger - Steaks - Tex-Mex</item>
-        <item>Egyptian - Oriental</item>
+        <item>American  Coffee - Drinks  Grill  International</item>
         <item>Sandwiches - Seafood</item>
         <item>Coffee - Drinks - Desserts</item>
     </string-array>
@@ -34,8 +34,260 @@
         <item>eldahan</item>
         <item>peking</item>
         <item>tgifriday</item>
-        <item>kosharysayedhanafy</item>
+        <item>spectra</item>
         <item>awladta2ta2</item>
         <item>dunkin</item>
     </string-array>
+
+    <string-array name="papa_johns_name_lst">
+        <item>Chicken Ranch</item>
+        <item>Pepperoni</item>
+        <item>Chicken BBQ</item>
+        <item>Smoky Cheese</item>
+    </string-array>
+    <string-array name="papa_johns_description_lst">
+        <item>Grilled chicken, tomato, fresh mushroom with ranch sauce</item>
+        <item>Loaded with pepperoni and extra mozzarella cheese</item>
+        <item>Grilled chicken, onion, fresh mushroom and BBQ sauce drizzled on top</item>
+        <item>Smoked veal, smoked cheese, cheddar, gouda, onion with creamy sauce</item>
+    </string-array>
+    <string-array name="papa_johns_price_lst">
+        <item>255 EGP</item>
+        <item>245 EGP</item>
+        <item>245 EGP</item>
+        <item>275 EGP</item>
+    </string-array>
+    <string-array name="papa_johns_images_lst">
+        <item>seafood_pasta</item>
+        <item>turbo_seafood_with_cream_and_mozzarella_tagen</item>
+        <item>boneless_seafood_soup</item>
+        <item>large_grilled_shrimp</item>
+    </string-array>
+
+    <string-array name="hamza_name_lst">
+        <item>Chicken Shawerma Fattah</item>
+        <item>Chicken Shawerma Sandwich</item>
+        <item>Mix Shawerma Fattah</item>
+        <item>Meat Shawerma Fattah</item>
+    </string-array>
+    <string-array name="hamza_description_lst">
+        <item>Chicken shawerma slices, yellow basmati rice, toasted bread, garlic dip</item>
+        <item>Garlic dip, pickled cucumber</item>
+        <item>Chicken shawerma slices, meat shawerma slices, yellow basmati rice, toasted bread, garlic dip</item>
+        <item>Meat shawerma slices, yellow basmati rice, toasted bread, garlic dip</item>
+    </string-array>
+    <string-array name="hamza_price_lst">
+        <item>71 EGP</item>
+        <item>66 EGP</item>
+        <item>81 EGP</item>
+        <item>275 EGP</item>
+    </string-array>
+    <string-array name="hamza_images_lst">
+        <item>chicken_shawerma_fattah</item>
+        <item>chicken_shawerma_sandwich</item>
+        <item>mix_shawerma_fattah</item>
+        <item>meat_shawerma_fattah</item>
+    </string-array>
+
+    <string-array name="McDonalds_name_lst">
+        <item>Big Mac</item>
+        <item>Big Tasty</item>
+        <item>Chicken Mac</item>
+        <item>Double Big Tasty</item>
+    </string-array>
+    <string-array name="McDonalds_description_lst">
+        <item>Two beef patties, that unbeatably tasty Big Mac sauce, melting signature cheese, crisp shredded lettuce, onions, pickles and a bun in the middle all between a toasted sesame seed bun</item>
+        <item>Juicy beef patty smothered in three extraordinary slices of Emmental cheese and topped with sliced tomato, shredded lettuce, onions and that special Big Tasty sauce. Emmental cheese might be unavailable</item>
+        <item>A delicious combination of breaded chicken patties, crisp lettuce, melting cheese, onions, pickles, and our special sauce, all framed between a toasted sesame seed bun</item>
+        <item>Two juicy beef patties smothered between slices of Emmental cheese, topped with sliced tomato, shredded lettuce, onions and that special Big Tasty sauce. Emmental cheese might be unavailable</item>
+    </string-array>
+    <string-array name="McDonalds_price_lst">
+        <item>88 EGP</item>
+        <item>132 EGP</item>
+        <item>120 EGP</item>
+        <item>149 EGP</item>
+    </string-array>
+    <string-array name="McDonalds_images_lst">
+        <item>big_mac</item>
+        <item>big_tasty</item>
+        <item>chicken_mac</item>
+        <item>double_big_tasty</item>
+    </string-array>
+
+    <string-array name="CrepeDoor_name_lst">
+        <item>Super Cordon Bleu Crepe</item>
+        <item>Crispy Chicken Crepe</item>
+        <item>Zinger Crepe</item>
+        <item>Chicken Friday Crepe</item>
+    </string-array>
+    <string-array name="CrepeDoor_description_lst">
+        <item>Fried chicken strips, smoked beef, mozzarella</item>
+        <item>Fried chicken breasts, smoked turkey, mozzarella</item>
+        <item>Spicy strips and mozzarella cheese</item>
+        <item>Grilled chicken thighs, mushroom, pepper, olives and mozzarella cheese</item>
+    </string-array>
+    <string-array name="CrepeDoor_price_lst">
+        <item>60 EGP</item>
+        <item>55 EGP</item>
+        <item>50 EGP</item>
+        <item>55 EGP</item>
+    </string-array>
+    <string-array name="CrepeDoor_images_lst">
+        <item>super_cordon_bleu_crepe</item>
+        <item>crispy_chicken_crepe</item>
+        <item>chicken_mac</item>
+        <item>chicken_friday_crepe</item>
+    </string-array>
+
+    <string-array name="eldahan_name_lst">
+        <item>1/2 Boneless Grilled Chicken</item>
+        <item>1/2 Grilled Chicken</item>
+        <item>1/2 Grilled Chicken Fillet</item>
+        <item>1/2 Grilled Chicken Meal</item>
+    </string-array>
+    <string-array name="eldahan_description_lst">
+        <item>Served with salad and bread</item>
+        <item>Served with salad and bread</item>
+        <item>Served with salad and bread</item>
+        <item>Served with khalta rice, salad and bread</item>
+    </string-array>
+    <string-array name="eldahan_price_lst">
+        <item>78 EGP</item>
+        <item>75 EGP</item>
+        <item>68 EGP</item>
+        <item>109 EGP</item>
+    </string-array>
+    <string-array name="eldahan_images_lst">
+        <item>half_boneless_grilled_chicken</item>
+        <item>half_grilled_chicken</item>
+        <item>half_grilled_chicken_fillet</item>
+        <item>half_grilled_chicken_meal</item>
+    </string-array>
+
+    <string-array name="peking_name_lst">
+        <item>Crisp Fried Potato</item>
+        <item>Crisp Fried Calamari</item>
+        <item>Trio Mix</item>
+        <item>Crisp Shandong Vegetables</item>
+    </string-array>
+    <string-array name="peking_description_lst">
+        <item>Served with your choice of plum sauce or spicy kun pao sauce</item>
+        <item>Served with your choice of plum sauce or spicy kun pao sauce</item>
+        <item>Peking rolls (2 pieces from one type), fried won ton (beef or chicken 6 pieces) and crispy mushroom</item>
+        <item>With chili</item>
+    </string-array>
+    <string-array name="peking_price_lst">
+        <item>34 EGP</item>
+        <item>88 EGP</item>
+        <item>69 EGP</item>
+        <item>39 EGP</item>
+    </string-array>
+    <string-array name="peking_images_lst">
+        <item>crisp_fried_potato</item>
+        <item>crisp_fried_calamari</item>
+        <item>trio_mix</item>
+        <item>crisp_shandong_vegetables</item>
+    </string-array>
+
+    <string-array name="fridays_name_lst">
+        <item>Cheese Nachos</item>
+        <item>Cowboy Burger</item>
+        <item>Yucatan Chicken Salad</item>
+        <item>Buffalo Wings</item>
+    </string-array>
+    <string-array name="fridays_description_lst">
+        <item>Crisp corn tortilla chips topped with melted colby cheese, jalapeno slices served with the classic trio: pico de gallo, guacamole, and sour cream</item>
+        <item>Australian beef burger piled high with slow-cooked BBQ beef, served with melted cheddar cheese, roasted beef bacon, frizzled onions and horseradish sauce on a brioche bun</item>
+        <item>Pulled chicken breast served on a bed of mixed greens, romaine lettuce, avocado, mix cheese, diced tomato, red onion, cilantro, crisp tostadas, drizzled with cilantro, lime vinaigrette and sriracha aioli</item>
+        <item>Fried chicken wings tossed in spicy buffalo sauce served with crisp celery sticks and blue cheese dip</item>
+    </string-array>
+    <string-array name="fridays_price_lst">
+        <item>128 EGP</item>
+        <item>177 EGP</item>
+        <item>149 EGP</item>
+        <item>129 EGP</item>
+    </string-array>
+    <string-array name="fridays_images_lst">
+        <item>cheese_nachos</item>
+        <item>cowboy_burger</item>
+        <item>yucatan_chicken_salad</item>
+        <item>buffalo_wings</item>
+    </string-array>
+
+    <string-array name="spectra_name_lst">
+        <item>Hickory Smoked Chicken</item>
+        <item>Grilled Chicken Fettuccine Pasta</item>
+        <item>Fried Mozzarella</item>
+        <item>Grilled Chicken Blue Ripple</item>
+    </string-array>
+    <string-array name="spectra_description_lst">
+        <item>Served with 2 side dishes or 1 pasta</item>
+        <item>White, red, basil or olive oil basil sauce</item>
+        <item>Served with your choice of sauce</item>
+        <item>Served with 2 side dishes or 1 penne pasta</item>
+    </string-array>
+    <string-array name="spectra_price_lst">
+        <item>200 EGP</item>
+        <item>134 EGP</item>
+        <item>89 EGP</item>
+        <item>235 EGP</item>
+    </string-array>
+    <string-array name="spectra_images_lst">
+        <item>hickory_smoked_chicken</item>
+        <item>grilled_chicken_fettuccine_pasta</item>
+        <item>fried_mozzarella</item>
+        <item>grilled_chicken_blue_ripple</item>
+    </string-array>
+
+    <string-array name="awaladta2ta2_name_lst">
+        <item>Seafood Pasta</item>
+        <item>Turbo Seafood with Cream and Mozzarella Tagen</item>
+        <item>Boneless Seafood Soup</item>
+        <item>Jumbo Grilled Shrimp</item>
+    </string-array>
+    <string-array name="awaladta2ta2_description_lst">
+        <item>Penne or spaghetti, with cream or salsa</item>
+        <item>Shrimp, squid and fillet</item>
+        <item>Squid, shrimp and fillet</item>
+        <item>Grilled with khalata or butterfly</item>
+    </string-array>
+    <string-array name="awaladta2ta2_price_lst">
+        <item>110 EGP</item>
+        <item>140 EGP</item>
+        <item>120 EGP</item>
+        <item>400 EGP</item>
+    </string-array>
+    <string-array name="awaladta2ta2_images_lst">
+        <item>seafood_pasta</item>
+        <item>turbo_seafood_with_cream_and_mozzarella_tagen</item>
+        <item>boneless_seafood_soup</item>
+        <item>large_grilled_shrimp</item>
+    </string-array>
+
+    <string-array name="dunkin_name_lst">
+        <item>choco_biscuit_donut</item>
+        <item>filled_ring_bavarian_donut</item>
+        <item>mocha_cream_filling</item>
+        <item>strawberry_frosted_sprinkles</item>
+    </string-array>
+    <string-array name="dunkin_description_lst">
+        <item>New Choco-Biscuit Donut with Chocolate and Biscuits on topings filled with biscuit cream</item>
+        <item>his classic donut is a yeast shell, with Bavarian Kreme filling, topped with chocolate icing</item>
+        <item>Mocha Cream Donut filled with a marvelous tasty mocha cream</item>
+        <item>Strawberry frosted topped with rainbow sprinkle.</item>
+    </string-array>
+    <string-array name="dunkin_price_lst">
+        <item>18.99 EGP</item>
+        <item>18.99 EGP</item>
+        <item>18.99 EGP</item>
+        <item>18.99 EGP</item>
+    </string-array>
+    <string-array name="dunkin_images_lst">
+        <item>choco_biscuit_donut</item>
+        <item>filled_ring_bavarian_donut</item>
+        <item>mocha_cream_filling</item>
+        <item>strawberry_frosted_sprinkles</item>
+    </string-array>
+
+
 </resources>
