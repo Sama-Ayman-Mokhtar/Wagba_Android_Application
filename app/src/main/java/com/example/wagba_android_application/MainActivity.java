@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
-                Log.d("sama", String.valueOf(navDestination.getId()));
-                Log.d("sama", String.valueOf(R.id.loginFragment));
-
                 if(navDestination.getId() == R.id.loginFragment )
                     bottomNavigationView.setVisibility(View.GONE);
                 else

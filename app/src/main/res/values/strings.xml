@@ -7,9 +7,12 @@
     <string name="password">PASSWORD</string>
     <string name="login">LOGIN</string>
     <string name="or">-OR-</string>
-    <string name="loginMicrosoft">LOG IN WITH MICROSOFT</string>
-
-
+    <string name="loginMicrosoft">SIGN UP WITH MICROSOFT</string>
+    <string name="pay">PAY NOW</string>
+    <string name="continue_shopping">CONTINUE SHOPPING</string>
+    <string name="Order_summary">Order Summary</string>
+    <string name="Total">Total</string>
+    <string name="Total_Price">1604.55 EGP</string>
 
     <string-array name="restaurant_names_lst">
         <item>Papa John\'s Pizza</item>
