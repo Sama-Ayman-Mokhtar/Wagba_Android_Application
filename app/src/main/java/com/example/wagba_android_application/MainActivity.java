@@ -1,6 +1,4 @@
-
 package com.example.wagba_android_application;
-
 
 import static androidx.navigation.ActivityKt.findNavController;
 

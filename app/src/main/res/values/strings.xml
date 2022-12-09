@@ -13,6 +13,8 @@
     <string name="Order_summary">Order Summary</string>
     <string name="Total">Total</string>
     <string name="Total_Price">1604.55 EGP</string>
+    <string name="Account_name">Sama Amin</string>
+    <string name="Account_email">18p7873@eng.asu.edu.eg</string>
 
     <string-array name="restaurant_names_lst">
         <item>Papa John\'s Pizza</item>
