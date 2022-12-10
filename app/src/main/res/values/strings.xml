@@ -15,6 +15,11 @@
     <string name="Total_Price">1604.55 EGP</string>
     <string name="Account_name">Sama Amin</string>
     <string name="Account_email">18p7873@eng.asu.edu.eg</string>
+    <string name="track">Track</string>
+    <string name="order_id">Order #1001</string>
+    <string name="order_details">Chicken Ranch - Meat Shawerma Fattah - Super Cordon Bleu Crepe - buffalo_wings - Strawberry Frosted Sprinkles Donut </string>
+    <string name="order_price">3570 EGP</string>
+
 
     <string-array name="restaurant_names_lst">
         <item>Papa John\'s Pizza</item>
@@ -279,10 +284,10 @@
     </string-array>
 
     <string-array name="dunkin_name_lst">
-        <item>choco_biscuit_donut</item>
-        <item>filled_ring_bavarian_donut</item>
-        <item>mocha_cream_filling</item>
-        <item>strawberry_frosted_sprinkles</item>
+        <item>Choco Biscuit Donut</item>
+        <item>Filled Ring Bavarian Donut</item>
+        <item>Mocha Cream Filling Donut</item>
+        <item>Strawberry Frosted Sprinkles Donut</item>
     </string-array>
     <string-array name="dunkin_description_lst">
         <item>New Choco-Biscuit Donut with Chocolate and Biscuits on topings filled with biscuit cream</item>

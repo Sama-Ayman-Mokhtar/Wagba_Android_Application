@@ -50,9 +50,9 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.Viewholder
         ImageView image;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-            name = itemView.findViewById(R.id.dish_name);
-            description = itemView.findViewById(R.id.dish_description);
-            price = itemView.findViewById(R.id.dish_price);
+            name = itemView.findViewById(R.id.order_id);
+            description = itemView.findViewById(R.id.order_details);
+            price = itemView.findViewById(R.id.order_price);
             image = itemView.findViewById(R.id.dishImage);
         }
     }
