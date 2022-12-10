@@ -14,7 +14,11 @@
         android:id="@+id/historyFragment"
         android:name="com.example.wagba_android_application.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_webTrackFragment"
+            app:destination="@id/webTrackFragment" />
+    </fragment>
     <fragment
         android:id="@+id/restaurantsFragment"
         android:name="com.example.wagba_android_application.RestaurantsFragment"
@@ -50,4 +54,9 @@
         android:name="com.example.wagba_android_application.cartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/webTrackFragment"
+        android:name="com.example.wagba_android_application.webTrackFragment"
+        android:label="fragment_web_track"
+        tools:layout="@layout/fragment_web_track" />
 </navigation>
