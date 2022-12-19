@@ -44,4 +44,5 @@ public class DishesModel {
     public void setPrice(String price) {
         this.price = price;
     }
+
 }

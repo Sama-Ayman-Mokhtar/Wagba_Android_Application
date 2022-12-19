@@ -1,6 +1,7 @@
 package com.example.wagba_android_application;
 
-import static androidx.navigation.ActivityKt.findNavController;
+import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,10 +10,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController navController, @NonNull NavDestination navDestination, @Nullable Bundle bundle) {
-                if(navDestination.getId() == R.id.loginFragment )
+                if (navDestination.getId() == R.id.loginFragment)
                     bottomNavigationView.setVisibility(View.GONE);
                 else
                     bottomNavigationView.setVisibility(View.VISIBLE);

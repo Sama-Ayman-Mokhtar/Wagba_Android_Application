@@ -1,9 +1,9 @@
 package com.example.wagba_android_application;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,20 +11,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
+import java.util.List;
 
 public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.Viewholder> {
 
-    ArrayList<RestaurantsModel> restaurantsModelsLst;
+    List<Restaurant> restaurantsModelsLst;
     Context context;
 
-    public RestaurantsAdapter(ArrayList<RestaurantsModel> restaurantsModelsLst) {
-        this.restaurantsModelsLst = restaurantsModelsLst;
+    public RestaurantsAdapter() {
+       // this.restaurantsModelsLst = restaurantsModelsLst;
     }
 
     @NonNull
@@ -39,10 +37,10 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        RestaurantsModel restaurantsModel = restaurantsModelsLst.get(position);
-        holder.name.setText(restaurantsModel.getName());
-        holder.description.setText(restaurantsModel.getDescription());
-        int id = holder.itemView.getResources().getIdentifier(restaurantsModel.getImage(), "drawable",  "com.example.wagba_android_application");
+        Restaurant restaurant = restaurantsModelsLst.get(position);
+        holder.name.setText(restaurant.getName());
+        holder.description.setText(restaurant.getDescription());
+        int id = holder.itemView.getResources().getIdentifier(restaurant.getImage(), "drawable",  "com.example.wagba_android_application");
         Drawable drawable = holder.itemView.getResources().getDrawable(id);
         holder.image.setImageDrawable(drawable);
 
@@ -51,15 +49,25 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_restaurantsFragment_to_dishesFragment);
-
+                Bundle bundle = new Bundle();
+                String restaurnat_name = holder.name.getText().toString();
+                Log.d("sama ", restaurnat_name);
+                bundle.putString("restaurant_name",restaurnat_name);
+                Navigation.findNavController(view).navigate(R.id.action_restaurantsFragment_to_dishesFragment,bundle);
             }
         });
     }
 
+    void setRestaurants(List<Restaurant> restaurants){
+        restaurantsModelsLst = restaurants;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
-        return restaurantsModelsLst.size();
+        if (restaurantsModelsLst != null)
+            return restaurantsModelsLst.size();
+        else return 0;
     }
 
     public class Viewholder extends RecyclerView.ViewHolder{
