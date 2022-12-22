@@ -8,6 +8,12 @@ import androidx.lifecycle.LiveData;
 import com.example.wagba_android_application.database.DishDao;
 import com.example.wagba_android_application.database.myRoomDatabase;
 import com.example.wagba_android_application.model.Dish;
+import com.example.wagba_android_application.model.Restaurant;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
@@ -18,13 +24,30 @@ public class DishRepository {
 
 
     public DishRepository(Application application) {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("dishes/");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    for (DataSnapshot ss: snapshot.getChildren()) {
+                        Dish dish = ss.getValue(Dish.class);
+                        insert(dish);
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+
         myRoomDatabase db = myRoomDatabase.getDatabase(application);
         dishDao = db.dishDao();
         allDishes = dishDao.getDishes();
     }
 
-    // Room executes all queries on a separate thread.
-    // Observed LiveData will notify the observer when the data has changed.
     public LiveData<List<Dish>> getAllDishes() {
         return allDishes;
     }
@@ -34,9 +57,6 @@ public class DishRepository {
         return allDishesOfRestaurant;
     }
 
-    // You must call this on a non-UI thread or your app will crash.
-    // Like this, Room ensures that you're not doing any long running operations on the main
-    // thread, blocking the UI.
     public void insert (Dish dish) {
         new insertAsyncTask(dishDao).execute(dish);
     }

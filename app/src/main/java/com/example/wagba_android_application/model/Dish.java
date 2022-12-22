@@ -29,6 +29,10 @@ public class Dish {
     @ColumnInfo(name = "image")
     private String image;
 
+    public Dish(){
+
+    }
+
     public Dish(@NonNull String dishName, @NonNull String restaurantName, @NonNull String description, @NonNull String price, @NonNull String image) {
         this.dishName = dishName;
         this.restaurantName = restaurantName;

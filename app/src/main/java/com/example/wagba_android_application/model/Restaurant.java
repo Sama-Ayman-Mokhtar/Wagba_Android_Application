@@ -21,6 +21,10 @@ public class Restaurant {
     @ColumnInfo(name = "image")
     private String image;
 
+    public Restaurant(){
+
+    }
+
     public Restaurant(@NonNull String name, @NonNull String description, @NonNull String image) {
         this.name = name;
         this.description = description;

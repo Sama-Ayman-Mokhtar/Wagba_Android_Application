@@ -2,13 +2,21 @@ package com.example.wagba_android_application.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.wagba_android_application.database.RestaurantDao;
 import com.example.wagba_android_application.database.myRoomDatabase;
 import com.example.wagba_android_application.model.Restaurant;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class restaurantRepository {
@@ -17,20 +25,32 @@ public class restaurantRepository {
 
 
     public restaurantRepository(Application application) {
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("restaurants");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Restaurant res = snapshot.getValue(Restaurant.class);
+                    insert(res);
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
+
         myRoomDatabase db = myRoomDatabase.getDatabase(application);
         restaurantDao = db.restaurantDao();
         AllRestaurants = restaurantDao.getRestaurants();
     }
 
-    // Room executes all queries on a separate thread.
-    // Observed LiveData will notify the observer when the data has changed.
     public LiveData<List<Restaurant>> getAllWords() {
         return AllRestaurants;
     }
 
-    // You must call this on a non-UI thread or your app will crash.
-    // Like this, Room ensures that you're not doing any long running operations on the main
-    // thread, blocking the UI.
     public void insert (Restaurant restaurant) {
         new insertAsyncTask(restaurantDao).execute(restaurant);
     }
