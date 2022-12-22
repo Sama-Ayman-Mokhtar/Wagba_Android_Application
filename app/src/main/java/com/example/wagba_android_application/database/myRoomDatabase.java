@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.database;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -7,6 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import com.example.wagba_android_application.model.Dish;
+import com.example.wagba_android_application.model.Restaurant;
 
 @Database(entities = {Restaurant.class, Dish.class}, version = 1, exportSchema = false)
 public abstract class myRoomDatabase extends androidx.room.RoomDatabase {
@@ -17,7 +20,7 @@ public abstract class myRoomDatabase extends androidx.room.RoomDatabase {
 
     private static myRoomDatabase INSTANCE;
 
-    static myRoomDatabase getDatabase(final Context context) {
+    public static myRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (myRoomDatabase.class) {
                 if (INSTANCE == null) {

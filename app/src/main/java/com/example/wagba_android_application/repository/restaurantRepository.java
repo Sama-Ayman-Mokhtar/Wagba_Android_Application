@@ -1,9 +1,13 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.wagba_android_application.database.RestaurantDao;
+import com.example.wagba_android_application.database.myRoomDatabase;
+import com.example.wagba_android_application.model.Restaurant;
 
 import java.util.List;
 
@@ -12,7 +16,7 @@ public class restaurantRepository {
     private LiveData<List<Restaurant>> AllRestaurants;
 
 
-    restaurantRepository(Application application) {
+    public restaurantRepository(Application application) {
         myRoomDatabase db = myRoomDatabase.getDatabase(application);
         restaurantDao = db.restaurantDao();
         AllRestaurants = restaurantDao.getRestaurants();
@@ -20,7 +24,7 @@ public class restaurantRepository {
 
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Restaurant>> getAllWords() {
+    public LiveData<List<Restaurant>> getAllWords() {
         return AllRestaurants;
     }
 

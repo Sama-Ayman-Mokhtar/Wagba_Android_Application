@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,11 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.viewmodel.RestaurantViewModel;
+import com.example.wagba_android_application.adapter.RestaurantsAdapter;
+import com.example.wagba_android_application.model.Restaurant;
 
 import java.util.List;
 

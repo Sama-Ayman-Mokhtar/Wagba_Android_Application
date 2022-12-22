@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.example.wagba_android_application.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,6 +30,7 @@ public class LoginFragment extends Fragment {
     GoogleSignInClient gsc;
     NavController nav;
     Button loginBtn;
+    Button signupBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,12 +43,21 @@ public class LoginFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         loginBtn = view.findViewById(R.id.loginBtn);
+        signupBtn = view.findViewById(R.id.signupBtn);
+
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nav = Navigation.findNavController(view);
+                nav.navigate(R.id.action_loginFragment_to_restaurantsFragment);
+            }
+        });
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(getActivity(), gso);
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 nav = Navigation.findNavController(view);

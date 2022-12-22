@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -11,7 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.model.Dish;
+
 import java.util.List;
 
 public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.Viewholder> {
@@ -19,7 +21,6 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.Viewholder
     List<Dish> dishesModelsLst;
 
     public DishesAdapter() {
-       // this.dishesModelsLst = dishesModelsLst;
     }
 
     @NonNull
@@ -43,7 +44,7 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.Viewholder
         holder.image.setImageDrawable(drawable);
     }
 
-    void setDishes(List<Dish> dishes){
+    public void setDishes(List<Dish> dishes){
         dishesModelsLst = dishes;
         notifyDataSetChanged();
     }
@@ -56,7 +57,6 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.Viewholder
     }
 
     public class Viewholder extends RecyclerView.ViewHolder{
-
         TextView name, description, price;
         ImageView image;
         public Viewholder(@NonNull View itemView) {

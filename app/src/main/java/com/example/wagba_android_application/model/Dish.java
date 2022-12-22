@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

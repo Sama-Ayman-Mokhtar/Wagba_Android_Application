@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.wagba_android_application.ProfileFragment"
+        android:name="com.example.wagba_android_application.view.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.wagba_android_application.HistoryFragment"
+        android:name="com.example.wagba_android_application.view.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/restaurantsFragment"
-        android:name="com.example.wagba_android_application.RestaurantsFragment"
+        android:name="com.example.wagba_android_application.view.RestaurantsFragment"
         android:label="fragment_restaurants"
         tools:layout="@layout/fragment_restaurants" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/dishesFragment"
-        android:name="com.example.wagba_android_application.dishesFragment"
+        android:name="com.example.wagba_android_application.view.dishesFragment"
         android:label="fragment_dishes"
         tools:layout="@layout/fragment_dishes" >
         <action
@@ -42,21 +42,23 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.wagba_android_application.LoginFragment"
+        android:name="com.example.wagba_android_application.view.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_restaurantsFragment"
+            app:popUpTo="@+id/wagba_nav"
+            app:popUpToInclusive="true"
             app:destination="@id/restaurantsFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="com.example.wagba_android_application.cartFragment"
+        android:name="com.example.wagba_android_application.view.cartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/webTrackFragment"
-        android:name="com.example.wagba_android_application.webTrackFragment"
+        android:name="com.example.wagba_android_application.view.webTrackFragment"
         android:label="fragment_web_track"
         tools:layout="@layout/fragment_web_track" />
 </navigation>

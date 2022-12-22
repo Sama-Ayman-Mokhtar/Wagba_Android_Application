@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,13 +12,16 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
+import com.example.wagba_android_application.viewmodel.DishViewModel;
+import com.example.wagba_android_application.adapter.DishesAdapter;
+import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.model.Dish;
+
 import java.util.List;
 
 public class dishesFragment extends Fragment {
 
     RecyclerView recyclerView;
-    //ArrayList<DishesModel> dishesModelArrayList = new ArrayList<>();
     private DishViewModel mDishViewModel;
 
     @Override
@@ -29,20 +32,8 @@ public class dishesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.fragment_dishes, container, false);
         recyclerView = view.findViewById(R.id.rv_dishes);
-
-        //hard coded to be passed in as parameter
-        /*Resources res = getResources();
-        String[] dishes_names_lst = res.getStringArray(R.array.spectra_name_lst);
-        String[] dishes_descriptions_lst = res.getStringArray(R.array.spectra_description_lst);
-        String[] dishes_prices_lst = res.getStringArray(R.array.spectra_price_lst);
-        String[] dishes_images_lst = res.getStringArray(R.array.spectra_images_lst);
-        for (int i = 0 ; i < dishes_names_lst.length; i++) {
-            dishesModelArrayList.add(
-                    new DishesModel(dishes_names_lst[i], dishes_descriptions_lst[i], dishes_images_lst[i], dishes_prices_lst[i] ));
-        }*/
         DishesAdapter dishesAdapter = new DishesAdapter();
         recyclerView.setAdapter(dishesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
@@ -54,7 +45,6 @@ public class dishesFragment extends Fragment {
                 dishesAdapter.setDishes(words);
             }
         });
-
         return view;
     }
 }

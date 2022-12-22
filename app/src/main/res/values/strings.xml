@@ -7,7 +7,7 @@
     <string name="password">PASSWORD</string>
     <string name="login">LOGIN</string>
     <string name="or">-OR-</string>
-    <string name="loginMicrosoft">SIGN UP WITH MICROSOFT</string>
+    <string name="loginMicrosoft">SIGN UP WITH GOOGLE</string>
     <string name="pay">PAY NOW</string>
     <string name="continue_shopping">CONTINUE SHOPPING</string>
     <string name="Order_summary">Order Summary</string>
@@ -19,6 +19,8 @@
     <string name="order_id">Order #1001</string>
     <string name="order_details">Chicken Ranch - Meat Shawerma Fattah - Super Cordon Bleu Crepe - buffalo_wings - Strawberry Frosted Sprinkles Donut </string>
     <string name="order_price">3570 EGP</string>
+    <string name="default_email">test@test.com</string>
+    <string name="default_password">test</string>
 
 
     <string-array name="restaurant_names_lst">

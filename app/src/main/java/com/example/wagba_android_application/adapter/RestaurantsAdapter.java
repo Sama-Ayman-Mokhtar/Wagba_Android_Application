@@ -1,4 +1,4 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -14,6 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.model.Restaurant;
+
 import java.util.List;
 
 public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.Viewholder> {
@@ -22,7 +25,6 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
     Context context;
 
     public RestaurantsAdapter() {
-       // this.restaurantsModelsLst = restaurantsModelsLst;
     }
 
     @NonNull
@@ -51,14 +53,13 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
             public void onClick(View view) {
                 Bundle bundle = new Bundle();
                 String restaurnat_name = holder.name.getText().toString();
-                Log.d("sama ", restaurnat_name);
                 bundle.putString("restaurant_name",restaurnat_name);
                 Navigation.findNavController(view).navigate(R.id.action_restaurantsFragment_to_dishesFragment,bundle);
             }
         });
     }
 
-    void setRestaurants(List<Restaurant> restaurants){
+    public void setRestaurants(List<Restaurant> restaurants){
         restaurantsModelsLst = restaurants;
         notifyDataSetChanged();
     }
@@ -71,7 +72,6 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
     }
 
     public class Viewholder extends RecyclerView.ViewHolder{
-
         TextView name, description;
         ImageView image;
         public Viewholder(@NonNull View itemView) {

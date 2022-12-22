@@ -1,9 +1,12 @@
-package com.example.wagba_android_application;
+package com.example.wagba_android_application.viewmodel;
 
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.example.wagba_android_application.model.Dish;
+import com.example.wagba_android_application.repository.DishRepository;
 
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class DishViewModel extends AndroidViewModel {
     }
 
     LiveData<List<Dish>> getAllWords() { return mAllDishes; }
-    LiveData<List<Dish>> getAllDishesOfRestuarant( String restaurant_name){
+    public LiveData<List<Dish>> getAllDishesOfRestuarant( String restaurant_name){
         mAllDishesOfRestaurant = mRepository.getAllDishesOfRestaurant(restaurant_name);
         return mAllDishesOfRestaurant;
     }
