@@ -1,65 +1,98 @@
 package com.example.wagba_android_application.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.adapter.DishesAdapter;
+import com.example.wagba_android_application.model.Dish;
+import com.example.wagba_android_application.model.Profile;
+import com.example.wagba_android_application.viewmodel.DishViewModel;
+import com.example.wagba_android_application.viewmodel.ProfileViewModel;
+import com.example.wagba_android_application.viewmodel.RestaurantViewModel;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.List;
+
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public ProfileFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static ProfileFragment newInstance(String param1, String param2) {
-        ProfileFragment fragment = new ProfileFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private ProfileViewModel mProfileViewModel;
+    EditText username;
+    EditText phoneNum;
+    TextView emailTxt;
+    Button saveBtn;
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        username = view.findViewById(R.id.person_name);
+        phoneNum = view.findViewById(R.id.editTextPhone);
+        emailTxt = view.findViewById(R.id.email);
+        saveBtn = view.findViewById(R.id.save_btn);
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(getActivity(), gso);
+        mProfileViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(ProfileViewModel.class);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+
+        if(acct!=null){
+            emailTxt.setText(acct.getEmail());
+            String email = acct.getEmail();
+            String name = acct.getDisplayName();
+            Profile profile = new Profile(email,name,null);
+            mProfileViewModel.insertFirstTime(profile);
+        }else{
+            emailTxt.setText("test@test.com");
+        }
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = emailTxt.getText().toString();
+                String phone = phoneNum.getText().toString();
+                String name = username.getText().toString();
+                Profile profile = new Profile(email,name,phone);
+                mProfileViewModel.insert(profile);
+            }
+        });
+
+
+        mProfileViewModel.getProfileOfUser(emailTxt.getText().toString()).observe(getActivity(), new Observer<Profile>() {
+            @Override
+            public void onChanged(@Nullable final Profile profile) {
+
+                if(profile!=null){
+                    emailTxt.setText(profile.getEmail());
+                    phoneNum.setText(profile.getPhoneNum());
+                    username.setText(profile.getUsername());
+                }
+
+            }
+        });
+        return view;
     }
 }

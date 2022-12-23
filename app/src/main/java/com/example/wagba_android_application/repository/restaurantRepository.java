@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.wagba_android_application.database.RestaurantDao;
-import com.example.wagba_android_application.database.myRoomDatabase;
+import com.example.wagba_android_application.database.myRoomDB;
 import com.example.wagba_android_application.model.Restaurant;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,7 +42,7 @@ public class restaurantRepository {
             }
         });
 
-        myRoomDatabase db = myRoomDatabase.getDatabase(application);
+        myRoomDB db = myRoomDB.getDatabase(application);
         restaurantDao = db.restaurantDao();
         AllRestaurants = restaurantDao.getRestaurants();
     }

@@ -21,6 +21,10 @@
     <string name="order_price">3570 EGP</string>
     <string name="default_email">test@test.com</string>
     <string name="default_password">test</string>
+    <string name="save">Save</string>
+    <string name="addPhoneNumber">Enter your phone number</string>
+
+
 
 
     <string-array name="restaurant_names_lst">

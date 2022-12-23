@@ -22,13 +22,14 @@
 
             <ImageView
                 android:id="@+id/person_img"
-                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ic_round_account_circle_24"
                 android:visibility="visible" />
-            <TextView
+            <EditText
+                android:id="@+id/person_name"
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="0dp"
@@ -51,15 +52,25 @@
                 android:layout_height="match_parent">
 
 
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="68dp"
+                    android:layout_height="53dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_baseline_email_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="56dp"
                     android:text="@string/Account_email"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.137"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,10 +79,35 @@
                     android:layout_width="68dp"
                     android:layout_height="53dp"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="40dp"
-                    android:src="@drawable/ic_baseline_email_24"
+                    android:layout_marginTop="120dp"
+                    android:src="@drawable/ic_baseline_phone_24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="48dp"
+                    android:ems="10"
+                    android:hint="@string/addPhoneNumber"
+                    android:inputType="phone"
+                    android:minHeight="48dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/email" />
+
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="211dp"
+                    android:layout_height="49dp"
+                    android:layout_marginBottom="108dp"
+                    android:backgroundTint="@color/teal_700"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:text="@string/save"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

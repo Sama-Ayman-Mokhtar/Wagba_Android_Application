@@ -13,10 +13,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.example.wagba_android_application.R;
+import com.example.wagba_android_application.model.Profile;
+import com.example.wagba_android_application.viewmodel.ProfileViewModel;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -26,11 +29,13 @@ import com.google.android.gms.tasks.Task;
 
 public class LoginFragment extends Fragment {
 
+    private ProfileViewModel mProfileViewModel;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     NavController nav;
     Button loginBtn;
     Button signupBtn;
+    EditText emailTxt;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,14 +49,20 @@ public class LoginFragment extends Fragment {
 
         loginBtn = view.findViewById(R.id.loginBtn);
         signupBtn = view.findViewById(R.id.signupBtn);
+        mProfileViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(ProfileViewModel.class);
+        emailTxt = view.findViewById(R.id.editTextTextEmailAddress);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String email = emailTxt.getText().toString();
+                Profile profile = new Profile(email,"My Username",null);
+                mProfileViewModel.insertFirstTime(profile);
                 nav = Navigation.findNavController(view);
                 nav.navigate(R.id.action_loginFragment_to_restaurantsFragment);
             }
         });
+
 
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
