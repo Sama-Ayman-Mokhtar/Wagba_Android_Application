@@ -55,7 +55,13 @@
         android:id="@+id/cartFragment"
         android:name="com.example.wagba_android_application.view.cartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_historyFragment"
+            app:popUpTo="@+id/wagba_nav"
+            app:popUpToInclusive="true"
+            app:destination="@id/historyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/webTrackFragment"
         android:name="com.example.wagba_android_application.view.webTrackFragment"

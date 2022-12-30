@@ -23,8 +23,7 @@
     <string name="default_password">test</string>
     <string name="save">Save</string>
     <string name="addPhoneNumber">Enter your phone number</string>
-
-
+    <string name="CheckOut">Check out</string>
 
 
     <string-array name="restaurant_names_lst">

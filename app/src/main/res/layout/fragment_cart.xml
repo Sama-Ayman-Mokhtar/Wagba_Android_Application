@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="70dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:orientation="vertical">
 
@@ -47,6 +48,7 @@
                     android:text="@string/Total" />
 
                 <TextView
+                    android:id="@+id/total_price"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center|center_horizontal|center_vertical"
@@ -65,6 +67,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/continueShopping_btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -72,6 +75,7 @@
                     android:text="@string/continue_shopping" />
 
                 <Button
+                    android:id="@+id/pay_btn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"

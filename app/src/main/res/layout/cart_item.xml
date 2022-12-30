@@ -44,13 +44,14 @@
             android:id="@+id/cart_item_price"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="16dp"
             android:text="75 EGP"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#6b706c"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="47dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

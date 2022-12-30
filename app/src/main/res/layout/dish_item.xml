@@ -71,11 +71,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/addCart" />
 
+        <TextView
+            android:id="@+id/hidden_is_selected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addCart" />
+
         <ImageView
             android:id="@+id/addCart"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_add_cart"
+            android:src="@drawable/ic_cart_leave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="20dp"

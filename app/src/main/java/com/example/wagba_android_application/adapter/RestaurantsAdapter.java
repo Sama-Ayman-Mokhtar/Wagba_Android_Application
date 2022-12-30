@@ -46,8 +46,6 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
         Drawable drawable = holder.itemView.getResources().getDrawable(id);
         holder.image.setImageDrawable(drawable);
 
-
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,5 +79,4 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
             image = itemView.findViewById(R.id.restaurant_image);
         }
     }
-
 }

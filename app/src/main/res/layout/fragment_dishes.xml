@@ -5,11 +5,64 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".view.dishesFragment">
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rv_dishes"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
-    android:layout_marginBottom="50dp"
-    tools:listitem="@layout/dish_item" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="@string/CheckOut"
+                android:src="@drawable/ic_cart_leave"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/item_count"
+                android:layout_width="0dp"
+                android:text="0 items"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/checkout_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="2"
+                android:text="@string/CheckOut" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dishes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="9"
+            tools:listitem="@layout/dish_item" />
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </FrameLayout>
