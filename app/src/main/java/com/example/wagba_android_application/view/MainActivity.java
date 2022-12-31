@@ -1,9 +1,7 @@
 package com.example.wagba_android_application.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +10,7 @@ import androidx.navigation.NavDestination;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 import com.example.wagba_android_application.R;
-import com.example.wagba_android_application.model.Dish;
-import com.example.wagba_android_application.model.Restaurant;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 

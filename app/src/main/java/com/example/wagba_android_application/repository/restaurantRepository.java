@@ -2,11 +2,7 @@ package com.example.wagba_android_application.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.util.Log;
-
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
 import com.example.wagba_android_application.database.RestaurantDao;
 import com.example.wagba_android_application.database.myRoomDB;
 import com.example.wagba_android_application.model.Restaurant;

@@ -1,7 +1,6 @@
 package com.example.wagba_android_application.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,6 @@ import java.util.List;
 public class RestaurantsFragment extends Fragment {
 
     RecyclerView recyclerView;
-    //ArrayList<Restaurant> restaurantsModelArrayList = new ArrayList<>();
     private RestaurantViewModel mResViewModel;
 
     @Override

@@ -2,9 +2,7 @@ package com.example.wagba_android_application.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
-
 import androidx.lifecycle.LiveData;
-
 import com.example.wagba_android_application.database.ProfileDao;
 import com.example.wagba_android_application.database.myRoomDB;
 import com.example.wagba_android_application.model.Profile;

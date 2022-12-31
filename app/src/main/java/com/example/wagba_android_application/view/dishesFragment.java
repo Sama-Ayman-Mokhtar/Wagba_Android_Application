@@ -6,8 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
@@ -15,16 +13,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.wagba_android_application.model.Cart;
 import com.example.wagba_android_application.viewmodel.CartViewModel;
 import com.example.wagba_android_application.viewmodel.DishViewModel;
 import com.example.wagba_android_application.adapter.DishesAdapter;
 import com.example.wagba_android_application.R;
 import com.example.wagba_android_application.model.Dish;
-
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class dishesFragment extends Fragment {

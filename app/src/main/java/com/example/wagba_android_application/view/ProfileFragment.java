@@ -90,7 +90,6 @@ public class ProfileFragment extends Fragment {
                     phoneNum.setText(profile.getPhoneNum());
                     username.setText(profile.getUsername());
                 }
-
             }
         });
         return view;
